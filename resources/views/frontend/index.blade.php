@@ -1,7 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
 <!doctype html>
 <html lang="en">
 
@@ -20,9 +16,7 @@ Author URL: http://w3layouts.com
                         <p data-animation="fadeInDown" class="mb-2">Tours </p>
                         <h1 data-animation="flipInX" data-delay="0.8s" data-color="#fff">
                             Pokhara <span>Fewa</span> Lake </h1>
-                        <div class="cta-btn" data-animation="fadeInUp" data-delay="1s">
-                            <a href="about.html" class="btn btn-style btn-primary">View More</a>
-                        </div>
+                     
                     </div>
                 </div>
                 <div class="hero-overlay"></div>
@@ -36,9 +30,7 @@ Author URL: http://w3layouts.com
                         <h1 data-animation="fadeInDown" data-delay="0.8s" data-color="#fff">
                             Adventure <span>Sports</span>
                         </h1>
-                        <div class="cta-btn" data-animation="fadeInDown" data-delay="1s">
-                            <a href="about.html" class="btn btn-style btn-primary">View More</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="hero-overlay"></div>
@@ -48,13 +40,11 @@ Author URL: http://w3layouts.com
             <div class="banner-slide bg3">
                 <div class="container">
                     <div class="hero-content">
-                        <p data-animation="fadeInUp" class="mb-2">New Models</p>
+                        <p data-animation="fadeInUp" class="mb-2">Travel</p>
                         <h1 data-animation="fadeInUp" data-color="#fff" data-delay="0.8s">
-                            Embrace <span>your</span> Style
+                            Lake <span>view</span> 
                         </h1>
-                        <div class="cta-btn" data-animation="fadeInDown" data-delay="1s">
-                            <a href="about.html" class="btn btn-style btn-primary">View More</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="hero-overlay"></div>
@@ -64,13 +54,11 @@ Author URL: http://w3layouts.com
             <div class="banner-slide bg4">
                 <div class="container">
                     <div class="hero-content">
-                        <p data-animation="fadeInDown" class="mb-2">Fashion Look</p>
+                        <p data-animation="fadeInDown" class="mb-2">Hiking</p>
                         <h1 data-animation="flipInX" data-color="#fff" data-delay="0.8s">
-                            Styles <span>and</span> Trends
+                            Mount  <span>Everest</span> Climbing
                         </h1>
-                        <div class="cta-btn" data-animation="fadeInUp" data-delay="1s">
-                            <a href="about.html" class="btn btn-style btn-primary">View More</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="hero-overlay"></div>
@@ -100,7 +88,7 @@ Author URL: http://w3layouts.com
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
                     <div class="grids5-info">
-                        <a href="{{url('itemlisting/Treking')}}" class="blog-image d-block zoom"><img src="{{ asset('frontend/assets/images/s2.jpg') }}" alt="" class="img-fluid radius-image" />
+                        <a href="{{url('itemlisting/Trekking')}}" class="blog-image d-block zoom"><img src="{{ asset('frontend/assets/images/s2.jpg') }}" alt="" class="img-fluid radius-image" />
                             <div class="image-overlay">
                                 <h4>Treking</h4>
                                 <p> Trekking is a form of walking, undertaken with the specific purpose </p>

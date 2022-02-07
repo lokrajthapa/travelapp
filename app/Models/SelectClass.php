@@ -15,8 +15,10 @@ class SelectClass extends Model
          public function selectSubHeading($heading)
          {
 
-            $subheading=SubPage::select('id','pageheading','pagesubheading')
-                        ->where('pageheading',$heading)
+            $subheading=SubPage::select('id','pagesubheading')
+                        ->whereHas('page', function($q) use($heading){
+                            $q->where('pageheading', $heading);
+                        })
                         ->get();
 
                   return $subheading;

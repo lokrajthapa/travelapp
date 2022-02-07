@@ -57,7 +57,7 @@ Author URL: http://w3layouts.com
                 <div class="col-lg-3 col-sm-6 contact-info mt-lg-0 mt-4">
                     <i class="fas fa-user-clock"></i>
                     <h4>Working Hours</h4>
-                    <p>sun-fri: 9hrs & Sat: Closed</p>
+                    <p>sun-fri: 11hrs </p>
                 </div>
             </div>
          
@@ -66,7 +66,7 @@ Author URL: http://w3layouts.com
     <!-- map -->
     <div class="map">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119486.84066822773!2d83.83876511563703!3d28.19864089966894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1644161099755!5m2!1sen!2snp"
             width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
     </div>
     <!-- //contact section -->

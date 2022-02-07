@@ -17,8 +17,6 @@ class CreatePagesTable extends Migration
             $table->id();
             $table->string('pageheading');
             $table->text('text')->nullable();
-
-            
             $table->timestamps();
         });
     }

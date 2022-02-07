@@ -19,9 +19,10 @@
                         </br>
                          
                             <select name="pageheading" id="pageheading"> 
-                                
-                                    
-                                        <option value="{{ $pages->pageheading }} ">{{ $pages->pageheading }}  </option>
+                                    @foreach ($pages as $page )
+                                                                    
+                                        <option value="{{ $page->page_id }} " {{$page->id ==$subpage->page_id?'selected':''}}>{{ $page->pageheading }}  </option>
+                                        @endforeach
                                      
                             </select>
 
@@ -50,7 +51,7 @@
 
         </div>
         <script src="{{ asset('ckeditor/ckeditor.js')}}"> 
-
+         CKEDITOR.instances['editor'].setData(value);
  
        </script> 
         <script>

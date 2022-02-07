@@ -29,9 +29,11 @@
                     <th width="280px">Action</th>
                 </tr>
                 @foreach ( $subpages  as $subpage)
+                <?php
+                ?>
                 <tr>
                     <td>{{ $subpage->id }}</td>
-                    <td> {{ $subpage->pageheading }} </td>
+                    <td> {{ $subpage->page->pageheading }} </td>
                     <td> {{ $subpage->pagesubheading }} </td>
                    
                     <td> <img src="uploads/thumbnailimg/{{ $subpage->thumbnailimg }}" width="100px"> 

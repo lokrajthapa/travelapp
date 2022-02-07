@@ -15,7 +15,7 @@ class CreateSubPagesTable extends Migration
     {
         Schema::create('sub_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('pageheading');
+            $table->unsignedBigInteger('page_id');
             $table->string('pagesubheading')->nullable();
             $table->text('text')->nullable();
             $table->string('thumbnailimg')->nullable();

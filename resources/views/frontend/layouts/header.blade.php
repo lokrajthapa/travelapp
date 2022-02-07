@@ -8,7 +8,7 @@ $subheadings = $sc->selectSubHeading("Tours");
 
 $subheadingsTravel = $sc->selectSubHeading("Travel");
 $subheadingsHiking = $sc->selectSubHeading("Hiking");
-$subheadingsTreking = $sc->selectSubHeading("Treking");
+$subheadingsTreking = $sc->selectSubHeading("Trekking");
 $subheadingsAdventure = $sc->selectSubHeading("Adventure Sports");
 
 
@@ -86,7 +86,7 @@ $subheadingsAdventure = $sc->selectSubHeading("Adventure Sports");
 
                         <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Treking<i class="fas fa-angle-down"></i>
+                                            Trekking<i class="fas fa-angle-down"></i>
                                         </a>                 
                                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
 

@@ -41,7 +41,7 @@ class SubPageController extends Controller
       }
       public function subpages()
       {
-         $subpages = SubPage::all();
+         $subpages = SubPage::with('page')->get();
          return view('subpage.all-subpages',compact('subpages') );
 
      
@@ -93,27 +93,28 @@ class SubPageController extends Controller
       
      public function editSubPages($id)
       {
-      
-        $pages= Page::find($id);
+         $subpage=SubPage::findOrFail($id);
 
-         $subpage=SubPage::find($id);
-        return view('subpage.edit-sub-page',compact('subpage','pages'));
+      
+         $pages= Page::all();
+
+         
+         return view('subpage.edit-sub-page',compact('subpage','pages'));
+       
       }
 
       public function updateSubPage(Request $request)
        {
       
-         $pageheading = $request->pageheading;
-         $pagesubheading = $request->pagesubheading;
-
-         $pagedescription =$request->text;
 
     //      $image->move(public_path('/uploads/notice'), $imageName);
 
           $subpage =Subpage::find($request->id);
-          $subpage->pageheading=$pageheading;
-          $subpage->pagesubheading=$pagesubheading;
-          $subpage->text=$pagedescription;
+          if($request->filled('page_id')){
+            $subpage->page_id=$request->page_id;
+          }
+          $subpage->pagesubheading= $request->pagesubheading;
+          $subpage->text=$request->text;
  
         if($request->hasfile('thumbnailimg'))
         {

@@ -25,7 +25,10 @@
   
 
     <?php
-    $Pages = DB::table('sub_pages')->select('*')->where('pageheading', request()->route('id'))->get();
+
+    use App\Models\SubPage;
+
+    $Pages = SubPage::whereHas('page', function($q){$q->wherePageheading(request()->route('id'));})->get();
     ?>
 
 
@@ -47,7 +50,8 @@
                         </a>
                         <div class="blog-info card-body blog-details">
                             <h4>
-                                <a class="blog-desc" href="{{url('page/').'/'.$page->id}}"> {{ $page->pagesubheading }}</a>
+                                <a class="blog-desc" href="{{url('page/').'/'.$page->id}}"> 
+                                {{  ucfirst($page->pagesubheading)  }}  </a>
 
                             </h4>
                             <p class="mt-3"><?php

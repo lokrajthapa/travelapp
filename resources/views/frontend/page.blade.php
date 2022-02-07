@@ -17,7 +17,7 @@ Author URL: http://w3layouts.com
     <section class="inner-banner py-5">
         <div class="w3l-breadcrumb py-lg-5">
             <div class="container pt-4 pb-sm-4">
-                <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4">{{ $pageDetails[0]->pageheading}}</h4>
+                <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4">{{ $pageDetails[0]->page->pageheading}}</h4>
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><i class="fas fa-angle-right mx-2"></i>{{ $pageDetails[0]->pagesubheading}}
@@ -36,7 +36,7 @@ Author URL: http://w3layouts.com
                     <!-- <h3 class="title-style">{{ $pageDetails[0]->pagesubheading }}</h3> -->
                     <div class="full mt-2 mb-2">
 
-                        <img class="img-fluid mt-2" src="{{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg}}">
+                        <img class="img-fluid mt-2" height="450px" src="{{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg}}">
                     </div>
 
                     <div class="full mt-2">
@@ -78,7 +78,10 @@ Author URL: http://w3layouts.com
                         </a>
                         <div class="blog-info card-body blog-details">
                             <h4>
-                                <a class="blog-desc" href="{{url('page/').'/'.$page->id}}"> {{ $page->pagesubheading }}</a>
+                                <a class="blog-desc" href="{{url('page/').'/'.$page->id}}"> 
+                                {{  ucfirst($page->pagesubheading)  }} 
+
+                                </a>
 
                             </h4>
                             <p class="mt-3"><?php

@@ -49,31 +49,31 @@
                     <ul class="list-footer-block">
                         <li>
                             Monday
-                            <span>9:00 - 18:00</span>
+                            <span>8:00AM - 9:00PM</span>
                         </li>
                         <li>
                             tuesday
-                            <span>10:00 - 19:00</span>
+                            <span>8:00AM - 9:00PM</span>
                         </li>
                         <li>
                             Wednesday
-                            <span>8:00 - 17:00</span>
+                            <span>8:00AM - 9:00PM</span>
                         </li>
                         <li>
                             Thursday
-                            <span>10:00 - 19:00</span>
+                            <span>8:00AM - 9:00PM</span>
                         </li>
                         <li>
                             Friday
-                            <span>10:00 - 19:00</span>
+                            <span>8:00AM - 9:00PM</span>
                         </li>
                         <li>
                             Saturday
-                            <span>10:00 - 19:00</span>
+                            <span>8:00 - 9:00PM</span>
                         </li>
                         <li>
                             Sunday
-                            <span>closed</span>
+                            <span>8:00 - 9:00PM</span>
                         </li>
                     </ul>
                 </div> 

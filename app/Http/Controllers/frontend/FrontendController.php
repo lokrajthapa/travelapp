@@ -35,7 +35,10 @@ class FrontendController extends Controller
     public function selectPageDetailsFromTable($id)
     {
     
-        $pageDetails=SubPage::select('id','pageheading','pagesubheading','text','thumbnailimg')
+        $pageDetails=SubPage::select('id','pagesubheading','text','thumbnailimg','page_id')
+                    ->with(['page'=> function($q){
+                      $q->select(['id', 'pageheading']);
+                    }])
                     ->where('id',$id)
                     ->get();
     
