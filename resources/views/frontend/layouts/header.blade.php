@@ -20,7 +20,7 @@ $subheadingsAdventure = $sc->selectSubHeading("Adventure Sports");
 <header id="site-header" class="fixed-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{ url('/contact') }}">
+            <a class="navbar-brand" href="{{ url('/') }}">
 
 
                 <img style="margin-top: -5px;" height="75px" src="{{ asset('frontend/assets/images/logo.svg') }}">

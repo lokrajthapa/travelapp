@@ -20,9 +20,9 @@
                             <label for="page heading ">page heading</label> 
                              <br />
                            
-                               <select name="pageheading" id="pageheading"> 
+                               <select name="page_id" id="page_id"> 
                                     @foreach ($pages as $page)
-                                        <option value="{{ $page->pageheading }} ">{{$page->pageheading }}  </option>
+                                        <option value="{{ $page->id }} ">{{ $page->pageheading }}  </option>
                                     @endforeach        
                                 </select>
                            </div>

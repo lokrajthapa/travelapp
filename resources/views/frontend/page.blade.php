@@ -19,7 +19,7 @@ Author URL: http://w3layouts.com
             <div class="container pt-4 pb-sm-4">
                 <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4">{{ $pageDetails[0]->page->pageheading}}</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/')}}">Home</a></li>
                     <li class="active"><i class="fas fa-angle-right mx-2"></i>{{ $pageDetails[0]->pagesubheading}}
                     </li>
                 </ul>
@@ -32,19 +32,21 @@ Author URL: http://w3layouts.com
     <section class="w3l-about py-2" id="about">
         <div class="container py-lg-2 py-md-4 py-2">
             <div class="row align-items-center">
-                <div class="col-lg-12 section-width pe-xl-3">
-                    <!-- <h3 class="title-style">{{ $pageDetails[0]->pagesubheading }}</h3> -->
-                    <div class="full mt-2 mb-2">
+                <div class="col-lg-11 section-width pe-xl-3 ">
+                   <div pi-4> 
+                   
+                        <div class="full mt-2 mb-2 padding-left-4 small-shadow ">
 
-                        <img class="img-fluid mt-2" height="450px" src="{{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg}}">
-                    </div>
+                            <img class="img-fluid text-center" height="450px" src="{{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg}}">
+                        </div>
 
-                    <div class="full mt-2">
+                        <div class="width-auto ">
 
 
-                         {!! $pageDetails[0]->text !!} 
+                            {!! $pageDetails[0]->text !!} 
 
-                    </div>
+                        </div>
+                  </div>
 
                 </div>
 

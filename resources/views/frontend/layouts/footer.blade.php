@@ -11,14 +11,9 @@
                         <ul class="social">
                             <li><a href="https://www.facebook.com/Mohit-International-Travels-Planning-105224212083984"><i class="fab fa-facebook-f"></i></a>
                             </li>
-                            <li><a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                            <li><a href="#twitter"><i class="fab fa-twitter"></i></a>
-                            </li>
                             <li><a href="#google"><i class="fab fa-google-plus-g"></i></a>
                             </li>
-                            <li><a href="#github"><i class="fab fa-github"></i></a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>

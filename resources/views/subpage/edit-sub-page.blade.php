@@ -18,11 +18,11 @@
                             <label for="page heading ">page heading</label>
                         </br>
                          
-                            <select name="pageheading" id="pageheading"> 
+                            <select disabled> 
                                     @foreach ($pages as $page )
                                                                     
-                                        <option value="{{ $page->page_id }} " {{$page->id ==$subpage->page_id?'selected':''}}>{{ $page->pageheading }}  </option>
-                                        @endforeach
+                                        <option value="{{ $page->id }}" {{ $subpage->page_id == $page->id ? 'selected' : '' }} >   {{ $page->pageheading }}  </option>
+                                     @endforeach
                                      
                             </select>
 

@@ -42,7 +42,7 @@ Author URL: http://w3layouts.com
                 <div class="col-lg-3 col-sm-6 contact-info">
                     <i class="fas fa-map-marked-alt"></i>
                     <h4>Location</h4>
-                    <p>lakeside-6, pokhara</p>
+                    <p>Lakeside-6, pokhara</p>
                 </div>
                 <div class="col-lg-3 col-sm-6 contact-info mt-md-0 mt-4">
                     <i class="fas fa-headset"></i>

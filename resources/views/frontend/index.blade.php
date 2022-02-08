@@ -90,7 +90,7 @@
                     <div class="grids5-info">
                         <a href="{{url('itemlisting/Trekking')}}" class="blog-image d-block zoom"><img src="{{ asset('frontend/assets/images/s2.jpg') }}" alt="" class="img-fluid radius-image" />
                             <div class="image-overlay">
-                                <h4>Treking</h4>
+                                <h4>Trekking</h4>
                                 <p> Trekking is a form of walking, undertaken with the specific purpose </p>
                             </div>
                             <div class="iconic-plus">
@@ -146,7 +146,7 @@
             <h3 class="title-style text-center mb-lg-5 mb-4">Popular Trekking & Tour Packgaes</h3>
             <div class="row justify-content-center">
                 @foreach($Pages as $page)
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                     <div class="grids5-info">
                         <a href="{{url('page/').'/'.$page->id}}" class="blog-image d-block zoom"><img src="{{url('uploads/thumbnailimg/').'/'.$page->thumbnailimg}}" alt="" class="img-fluid news-image" />
                             <div class="image-overlay">

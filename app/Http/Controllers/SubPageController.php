@@ -13,13 +13,14 @@ class SubPageController extends Controller
 {
     public function addsubPage()
     { 
-       $pages= Page::all();
+      $pages= Page::all();
        return view('/subpage/add-sub-page',compact('pages'));
     }
     public function subPageStore(Request $request)
       {  
+      
         
-         $pageheading = $request->pageheading;
+         
          $pagesubheading = $request->pagesubheading;
          $pagedescription =$request->text;
          $image =$request->file('thumbnailimg');
@@ -29,7 +30,11 @@ class SubPageController extends Controller
         
 
          $subpage=new SubPage();
-         $subpage->pageheading=$pageheading;
+         if($request->filled('page_id')){
+            $subpage->page_id=$request->page_id;
+          }
+
+        
          $subpage->pagesubheading=$pagesubheading;
          $subpage->text=$pagedescription;
          $subpage->thumbnailimg=$imageName;

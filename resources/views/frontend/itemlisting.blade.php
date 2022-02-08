@@ -41,7 +41,7 @@
 
                 @foreach($Pages as $page)
 
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4 mb-4">
                     <div class="grids5-info">
                         <a href="#blog" class="blog-image d-block zoom"><img src="{{url('uploads/thumbnailimg/').'/'.$page->thumbnailimg}}" alt="" class="img-fluid news-image" />
                             <div class="image-overlay">
