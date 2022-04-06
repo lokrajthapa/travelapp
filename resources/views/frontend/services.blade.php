@@ -1,22 +1,12 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dress-Up - Fashion Category Bootstrap Responsive Website Template - Services : W3Layouts</title>
-    <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style-starter.css') }}">
-</head>
+@include('frontend.layouts.title')
 
 <body>
     <!-- header -->
-    @extends('frontend.layouts.header')
+    @include('frontend.layouts.header')
    
     <!-- //header -->
 
@@ -255,7 +245,7 @@ Author URL: http://w3layouts.com
     <!-- //pricing section -->
 
     <!-- footer -->
-    @extends('frontend.layouts.footer')
+    @include('frontend.layouts.footer')
     <!-- footer -->
      
 </body>

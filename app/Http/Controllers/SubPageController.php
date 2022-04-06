@@ -23,13 +23,22 @@ class SubPageController extends Controller
          
          $pagesubheading = $request->pagesubheading;
          $pagedescription =$request->text;
-         $image =$request->file('thumbnailimg');
-         $imageName=time().'.'.$image->extension();
-         $image->move(public_path('/uploads/thumbnailimg'), $imageName);
+         $subpage=new SubPage();
+         if($request->has('thumbnailimag'))
+         {
 
         
+         $image =$request->file('thumbnailimg');
 
-         $subpage=new SubPage();
+         $imageName=time().'.'.$image->extension();
+         $image->move(public_path('/uploads/thumbnailimg'), $imageName);
+         $subpage->thumbnailimg=$imageName;
+         
+        }
+   
+        
+
+        
          if($request->filled('page_id')){
             $subpage->page_id=$request->page_id;
           }
@@ -37,7 +46,7 @@ class SubPageController extends Controller
         
          $subpage->pagesubheading=$pagesubheading;
          $subpage->text=$pagedescription;
-         $subpage->thumbnailimg=$imageName;
+        
 
      
          $subpage->save();
@@ -102,7 +111,7 @@ class SubPageController extends Controller
 
       
          $pages= Page::all();
-
+     
          
          return view('subpage.edit-sub-page',compact('subpage','pages'));
        
@@ -112,7 +121,7 @@ class SubPageController extends Controller
        {
       
 
-    //      $image->move(public_path('/uploads/notice'), $imageName);
+;
 
           $subpage =Subpage::find($request->id);
           if($request->filled('page_id')){
@@ -146,7 +155,7 @@ class SubPageController extends Controller
       {  
           $subpage = Subpage::find($id);
         
-          unlink(public_path('/uploads/thumbnailimg').'/'.$subpage->thumbnailimg);
+         unlink(public_path('/uploads/thumbnailimg').'/'.$subpage->thumbnailimg);
          $subpage->delete();
 
      

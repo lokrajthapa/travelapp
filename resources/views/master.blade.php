@@ -51,7 +51,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">   
+    <a href="#" class="brand-link">   
       <span class="brand-text font-weight-light">Admin Section</span>
     </a>
 
@@ -75,23 +75,8 @@
             </a>
 
           </li>
-          <!-- <li class="nav-item">
-            <a href="/add-images" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-               Add images
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/add-blogs" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                 blog_post               
-              </p>
-            </a>
-          </li> -->
+          
+          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -108,12 +93,7 @@
                   <p>page  heading</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="/add-heading" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>heading and description</p>
-                </a>
-              </li> -->
+            
        
               <li class="#">
                 <a href="/add-sub-pages" class="nav-link">
@@ -121,17 +101,20 @@
                   <p>sub-page heading</p>
                 </a>
               </li>
+             
  
             </ul>
             <li class="nav-item">
               
                <li class="nav-item d-none d-sm-inline-block">
-                 <form method="post" action="{{ route('logout')}}" >
-                   @csrf
-                    <a href="{{route('logout')}} " onclick="event.preventDefault(); this.closest('form').submit();">logout </a>
+                 <div>
+                      <form method="post" action="{{ route('logout')}}" >
+                          @csrf
+                          <a href="{{route('logout')}} " onclick="event.preventDefault(); this.closest('form').submit();">logout </a>
 
-                
-                 </form>
+                    
+                      </form>
+                </div>
                </li>
               
             </li>

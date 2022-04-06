@@ -33,7 +33,7 @@
                            
                           <div class="form-group">
                             <label for="image">thumnailimge</label> 
-                             <input type="file" name="thumbnailimg" class="form-control" placeholder="image" onchange="previewFile(this)" > 
+                             <input type="file" name="thumbnailimg" class="form-control" placeholder="image" value="uploads/thumbnailimg/{{ $subpage->thumbnailimg }}" onchange="previewFile(this)" > 
                             <img id="previewImg" alt="image"  src="uploads/thumbnailimg/{{ $subpage->thumbnailimg }}"style="max-width:130px;margin-top:20px;" > 
                           <div>
 
@@ -41,7 +41,13 @@
                             <label for="textarea">textarea</label>
                             <textarea name="text" value="{{ $subpage->text }}" id="editor">
 
+
                             </textarea>
+                            <script>
+                                //CKEDITOR.replace('text').getData('text');
+                                CKEDITOR.instances.editor.getData(); 
+
+                            </script>   
                             </div>
                         
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -51,10 +57,18 @@
 
         </div>
         <script src="{{ asset('ckeditor/ckeditor.js')}}"> 
-         CKEDITOR.instances['editor'].setData(value);
+
+        var data = CKEDITOR.instances.editor.getData();
+
+
+       
+    
+</script>
+      
  
        </script> 
         <script>
+
 
 
             let uri="/storage/uploads/";

@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 
-@extends('frontend.layouts.title')
+@include('frontend.layouts.title')
 
 <body>
-    @extends('frontend.layouts.header')
+    @include('frontend.layouts.header')
 
     <!-- hero slider Start -->
     <div class="banner-wrap">
@@ -15,7 +15,7 @@
                     <div class="hero-content">
                         <p data-animation="fadeInDown" class="mb-2">Tours </p>
                         <h1 data-animation="flipInX" data-delay="0.8s" data-color="#fff">
-                            Pokhara <span>Fewa</span> Lake </h1>
+                            Bhutan  </h1>
                      
                     </div>
                 </div>
@@ -26,9 +26,9 @@
             <div class="banner-slide bg2">
                 <div class="container">
                     <div class="hero-content">
-                        <p data-animation="fadeInDown" class="mb-2">Rafting</p>
+                        <p data-animation="fadeInDown" class="mb-2">Tour</p>
                         <h1 data-animation="fadeInDown" data-delay="0.8s" data-color="#fff">
-                            Adventure <span>Sports</span>
+                            Europe 
                         </h1>
                         
                     </div>
@@ -40,7 +40,7 @@
             <div class="banner-slide bg3">
                 <div class="container">
                     <div class="hero-content">
-                        <p data-animation="fadeInUp" class="mb-2">Travel</p>
+                        <p data-animation="fadeInUp" class="mb-2">Travel </p>
                         <h1 data-animation="fadeInUp" data-color="#fff" data-delay="0.8s">
                             Lake <span>view</span> 
                         </h1>
@@ -54,9 +54,9 @@
             <div class="banner-slide bg4">
                 <div class="container">
                     <div class="hero-content">
-                        <p data-animation="fadeInDown" class="mb-2">Hiking</p>
+                        <p data-animation="fadeInDown" class="mb-2">Tour</p>
                         <h1 data-animation="flipInX" data-color="#fff" data-delay="0.8s">
-                            Mount  <span>Everest</span> Climbing
+                            India  <span>Kashmir</span> 
                         </h1>
                         
                     </div>
@@ -101,10 +101,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
                     <div class="grids5-info">
-                        <a href="{{url('itemlisting/Hiking')}}" class="blog-image d-block zoom"><img src="{{ asset('frontend/assets/images/s3.jpg') }}" alt="" class="img-fluid radius-image" />
+                        <a href="{{url('itemlisting/Asia')}}" class="blog-image d-block zoom"><img src="{{ asset('frontend/assets/images/s3.jpg') }}" alt="" class="img-fluid radius-image" />
                             <div class="image-overlay">
-                                <h4>Hiking</h4>
-                                <p>Reduce your heart disease by going hiking.On Going up and down hills gets the heart pumping, creating a great cardio workout.  </p>
+                                <h4>Asia tour</h4>
+                                <p>Asia is the largest and most populous continent, home to the largest (Russia) and most populous (China) nations.</p>
                             </div>
                             <div class="iconic-plus">
                                 <i class="fas fa-plus"></i>
@@ -114,10 +114,10 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
                     <div class="grids5-info">
-                        <a href="{{url('itemlisting/Adventure Sports')}}" class="blog-image d-block zoom"><img src="{{ asset ('frontend/assets/images/s4.jpg') }}" alt="" class="img-fluid radius-image" />
+                        <a href="{{url('itemlisting/Activities')}}" class="blog-image d-block zoom"><img src="{{ asset ('frontend/assets/images/s4.jpg') }}" alt="" class="img-fluid radius-image" />
                             <div class="image-overlay">
-                                <h4>Adventure Sports</h4>
-                                <p>An adventure sport pushes one to get out of their comfort zone and perform a task</p>
+                                <h4>Activities </h4>
+                                <p>An Activities sport pushes one to get out of their comfort zone and perform a task</p>
                             </div>
                             <div class="iconic-plus">
                                 <i class="fas fa-plus"></i>
@@ -181,7 +181,7 @@
     <!-- //blog section -->
 
     <!-- footer -->
-    @extends('frontend.layouts.footer')
+    @include('frontend.layouts.footer')
 
 
     <!-- //footer -->

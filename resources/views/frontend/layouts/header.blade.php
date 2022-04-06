@@ -6,10 +6,26 @@ $sc = new SelectClass();
 
 $subheadings = $sc->selectSubHeading("Tours");
 
-$subheadingsTravel = $sc->selectSubHeading("Travel");
+
 $subheadingsHiking = $sc->selectSubHeading("Hiking");
 $subheadingsTreking = $sc->selectSubHeading("Trekking");
-$subheadingsAdventure = $sc->selectSubHeading("Adventure Sports");
+$subheadingsTibet = $sc->selectSubHeading("Tibet");
+$subheadingsBhutan = $sc->selectSubHeading("Bhutan");
+$subheadingsIndia = $sc->selectSubHeading("India");
+$subheadingsAsia = $sc->selectSubHeading("Asia");
+$subheadingsEurope =$sc->selectSubHeading('Europe');
+$subheadingsEverstRegion =$sc->selectSubHeading('Everest Region Trekking');
+$subheadingsAnnapurnaRegion =$sc->selectSubHeading('Annapurna Region');
+$subheadingsActivities =$sc->selectSubHeading('Activities');
+
+
+
+
+
+
+
+
+
 
 
  
@@ -34,82 +50,196 @@ $subheadingsAdventure = $sc->selectSubHeading("Adventure Sports");
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{ url('/about') }}">About</a>
                         </li>
-
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Travel<i class="fas fa-angle-down"> </i>
-                            </a>                 
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Destinations  <i class="fas fa-angle-down"> </i> </a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Nepal  &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+										<li><a class="dropdown-item" href="#">Tours  &raquo;</a>
+                                           <ul class="submenu dropdown-menu">
+											   
+										   @foreach($subheadings as $subheading)
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
+											</li>
+                                            @endforeach
+											
 
-                                    @foreach($subheadingsTravel as $subheading)
-                                    <li>
-                                        <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
-                                    </li>
+
+											</ul>
+                                       </li>
+										<li><a class="dropdown-item" href="#">Hiking  &raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+											@foreach($subheadingsHiking as $subheading)
+
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
+											</li>
+                                            @endforeach
+                                             
+											</ul>
+                                       
+                                        </li>
+										<li><a class="dropdown-item" href="#">Trekking  &raquo; </a>
+											<ul class="submenu dropdown-menu">
+											@foreach($subheadingsTreking   as $subheading)
+
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+											</li>
+                                            @endforeach
+
+											</ul>
+										</li>
+										
+
+								</ul>
+                               </li>
+								<li><a class="dropdown-item" href="#"> Tibet &raquo; </a>
+									<ul class="submenu dropdown-menu">
+
+									@foreach($subheadingsTibet  as $subheading)
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+											</li>
+									@endforeach
+										
+
+									</ul>
+								</li>
+								<li><a class="dropdown-item" href="#">Bhutan   &raquo;</a>
+                                   <ul class="submenu dropdown-menu">
+								   @foreach($subheadingsBhutan   as $subheading)
+
+										<li>
+											<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+										</li>
                                     @endforeach
-                                </ul>
-                         </li>       
+									</ul>
+                               
+                                 </li>
+								<li><a class="dropdown-item" href="#"> India  &raquo;</a>
+                                      <ul class="submenu dropdown-menu">
+									  @foreach($subheadingsIndia   as $subheading)
+
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+											</li>
+									  @endforeach
+
+									</ul>
+                                </li>
+								<li><a class="dropdown-item" href="#"> Aisa &raquo;</a> 
+									<ul class="submenu dropdown-menu">
+									@foreach($subheadingsAsia   as $subheading)
+
+									<li>
+										<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+									</li>
+                                   @endforeach									
+
+																		
+																			
+																				
+											
+
+									</ul>
+                               </li>
+								<li><a class="dropdown-item" href="#"> Europe &raquo;</a>
+								  
+								<ul class="submenu dropdown-menu">
+
+								@foreach($subheadingsEurope   as $subheading)
+
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+											</li>
+								@endforeach	
+
+																		
+																			
+																				
+											
+
+									</ul>
+							
+							
+							   </li>
+
+
+							</ul>
+						</li>
+                       
+
+
+                       
 
                     
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tours<i class="fas fa-angle-down"></i>
-                            </a>                 
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-
-                                        @foreach($subheadings as $subheading)
-                                        <li>
-                                            <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
-                                        </li>
-                                        @endforeach
-                                </ul>
-                         </li>        
+                               
                     
-                        <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Hiking<i class="fas fa-angle-down"></i>
-                                    </a>                 
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                         <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Trekking In Nepal  <i class="fas fa-angle-down"> </i> </a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Everest Region  &raquo;</a> 
+                                    <ul class="submenu dropdown-menu">
+									@foreach($subheadingsEverstRegion   as $subheading)
 
-                                        @foreach($subheadingsHiking as $subheading)
-                                        <li>
-                                            <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
-                                        </li>
-                                        @endforeach
-                                </ul>
-                        </li>
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+											</li>
+									@endforeach	
+                                            
+                                            
 
-                        <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Trekking<i class="fas fa-angle-down"></i>
-                                        </a>                 
-                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-
-                                        @foreach($subheadingsTreking as $subheading)
-                                        <li>
-                                            <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
-                                        </li>
-                                        @endforeach
                                     </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Adventures<i class="fas fa-angle-down"></i>
-                                        </a>                 
-                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                               </li>
+								<li><a class="dropdown-item" href="#"> Annapurna Region &raquo; </a>
+									<ul class="submenu dropdown-menu">
 
-                                        @foreach($subheadingsAdventure as $subheading)
-                                        <li>
-                                            <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}">{{ $subheading->pagesubheading }}</a>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                        </li>
+										@foreach($subheadingsAnnapurnaRegion   as $subheading)
+
+											<li>
+												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+									  		</li>
+								      	@endforeach	
+                                     								
+										
+
+									</ul>
+								</li>
+
+								
+
+								
+								
+
+
+							</ul>
+						</li>
+
+             
+                        <li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Activities  <i class="fas fa-angle-down"> </i> </a>
+							<ul class="dropdown-menu">
+							@foreach($subheadingsActivities   as $subheading)
+
+                              <li>
+	                             <a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+                              </li>
+                            @endforeach	
+
+
+
+								
+								
+
+
+							</ul>
+						</li>
 
                         <li class="nav-item">
                             <a class="nav-link " href="{{ url('/contact') }}">Contact</a>

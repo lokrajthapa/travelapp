@@ -1,51 +1,85 @@
 @extends('master')
+
+
 @section('content')
 <div class="container">
     <div class="row">
+        {{ $pages[0] }}
         <div class="col-md-6 offset-md-3">
-                     @if(Session::has('page_updated'))
-                            <h6 class="alert alert-success"> {{ Session::get('page_updated') }}</h6>
+                     @if(Session::has('subpage_added'))
+                            <h6 class="alert alert-success"> {{ Session::get('subpage_added') }}</h6>
                         @endif
                         <div class="card-header"> 
-                        <h4> edit page</h4>
-                            <a href="{{ url('/all-pages')}}" class="btn btn-danger float-end"> view allpages</a>
+                        <h4> Add new sub-page-child</h4>
+                            <a href="{{ url('/all-sub-pages') }} " class="btn btn-danger float-end"> view all Subpages and Subpages</a>
                         </div>
                         
-                        <form action="{{ route('page.update') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('sub-page.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" name="id" value="{{ $page->id }}" />
+                             
+                          <div class="form-group">
+                            <label for="page heading ">heading Page heading</label> 
+                             <br />
+                           
+                               <select name="page_id" id="page_id"> 
+                                    @foreach ($pages as $page)
+                                        <option value="{{ $page->id }} "> {{ $page->pagesubheading }}  </option>
+                                    @endforeach        
+                                </select>
+                           </div>
+
                             <div class="form-group">
-                                    <label for=" page heading ">page heading</label>
-                                    <input type="text" class="form-control" name="pageheading"  value="{{ $page->pageheading }}" placeholder=" ">
+                            <label for=" page heading ">Sub-page heading</label>
+                            <input type="text" class="form-control" name="pagesubheading"  placeholder="Enter page heading">
                             </div>
 
+                            
+                            <div class="form-group">
+                            <label for="image">Thumbnail Image</label>
+                            <input type="file" name="thumbnailimg" class="form-control" placeholder="Thumbnailimage" onchange="previewFile(this)">
+                            <img class="bi bi-images" id="previewImg" alt="image" style="max-width:130px;margin-top:20px;"  >    
+                            </div>
+
+        
                             <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea name="text" id="editor"   value="{{ $page->text }} ">
-
+                            <textarea name="text" id="editor" >
                                 
                             </textarea>
         
                             </div>
                                                 
                             <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <script>
-                              var ckdata =  CKEDITOR.instances['editor'].getData();
-                              var data = CKEDITOR.instances.editor.getData();
-                     </script> 
+                        </form>
+
+ <script src="{{ asset('ckeditor/ckeditor.js')}}"> 
+
+ 
+ </script> 
+ <script> 
+           function previewFile(input)
+            {
+                var file=$("input[type=file]").get(0).files[0];
+                if(file)
+                {
+                    var reader= new FileReader();
+                    reader.onload = function()
+                    {
+                        $('#previewImg').attr("src",reader.result);
+
+                    }
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            
+</script> 
 
 
-        </div>
+<script>
 
 
-    </div>
-    <script src="{{ asset('ckeditor/ckeditor.js')}}"> </script>
-
-    <script>
-
-
-        let uri="/storage/uploads/";
+            let uri="/storage/uploads/";
             class MyUploadAdapter {
                 constructor( loader ) {
                     // The file loader instance to use during the upload.
@@ -171,7 +205,15 @@
 
 </script> 
 
+
+        </div>
+
+
+    </div>
+
  
 </div>
+
+
 
 @endsection

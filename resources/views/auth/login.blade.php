@@ -35,7 +35,7 @@
                     </div>
 
                     <br>
-                    <a href="/login">new user !! register here ! </a>
+                    <a href="/register">new user !! register here ! </a>
 
 
                 </form>

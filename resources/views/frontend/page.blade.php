@@ -1,15 +1,12 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="en">
 
-@extends('frontend.layouts.title')
+@include('frontend.layouts.title')
 
 <body>
     <!-- header -->
- @extends('frontend.layouts.header')
+ @include('frontend.layouts.header')
 
     <!-- //header -->
 
@@ -20,8 +17,7 @@ Author URL: http://w3layouts.com
                 <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4">{{ $pageDetails[0]->page->pageheading}}</h4>
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="{{ url('/')}}">Home</a></li>
-                    <li class="active"><i class="fas fa-angle-right mx-2"></i>{{ $pageDetails[0]->pagesubheading}}
-                    </li>
+                    <li class="active"><i class="fas fa-angle-right mx-2"></i>{{ $pageDetails[0]->pagesubheading}}    </li>
                 </ul>
             </div>
         </div>
@@ -37,7 +33,7 @@ Author URL: http://w3layouts.com
                    
                         <div class="full mt-2 mb-2 padding-left-4 small-shadow ">
 
-                            <img class="img-fluid text-center" height="450px" src="{{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg}}">
+                            <img class="img-fluid text-center" height="450px" src=" {{url('uploads/thumbnailimg/').'/'.$pageDetails[0]->thumbnailimg }}">
                         </div>
 
                         <div class="width-auto ">
@@ -104,7 +100,7 @@ Author URL: http://w3layouts.com
 
 
     <!-- footer -->
-    @extends('frontend.layouts.footer')
+    @include('frontend.layouts.footer')
 
     <!-- //footer -->
 

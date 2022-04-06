@@ -10,7 +10,7 @@
                         @endif
                         <div class="card-header"> 
                         <h4> Add new sub-Page</h4>
-                            <a href="{{ url('/all-sub-pages')}}" class="btn btn-danger float-end"> view all pages and subpages</a>
+                            <a href="{{ url('/all-sub-pages') }} " class="btn btn-danger float-end"> view all pages and subpages</a>
                         </div>
                         
                         <form action="{{route('sub-page.store')}}" method="POST" enctype="multipart/form-data">

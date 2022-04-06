@@ -32,9 +32,9 @@
                             <h3 class="">Contact Info</h3>
                             <ul class="footer-contact-list">
                                 <li class="">lakeside-6, Pokhara</li>
-                                <li class="mt-2"><a href="tel:+12 23456790">+9779816142365</a></li>
-                                <li class="mt-2"><a href="mailto:info@example.com">Mohittravel@gmail.com</a></li>
-                                <li class="mt-2"><a href="mailto:info@example.com">www.Mohitinternaltionaltravel.com</a></li>
+                                <li class="mt-2"><a href="tel:+977 9847489089">+977 9847489089</a></li>
+                                <li class="mt-2"><a href="mailto:info@mohittravel.com">info@mohittravel.com</a></li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                 </div> 
             </div>
             <div class="below-section text-center pt-4 mt-5">
-                <p class="copy-text">&copy; 2021 Dress-Up. All rights reserved. Design by <a href="#" target="_blank">
+                <p class="copy-text">&copy; 2021 Mohit International Travel Planner. All rights reserved. Design by <a href="https://tukisoft.com.np" target="_blank">
                         Tuki Soft </a>
                 </p>
             </div>

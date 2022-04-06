@@ -7,6 +7,8 @@ use App\Http\Controllers\SubPageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\frontend\FrontendController;
+use App\Http\Controllers\SubPageChildController;
+
 
 
 
@@ -111,6 +113,15 @@ Route::get('/edit-images/{id}',[ImageController::class,'editImages']);
 Route::post('/update-image',[ImageController::class,'updateImage'])->name('image.update');
 Route::get('/delete-image/{id}',[ImageController::class,'deleteimage']);
 });
+
+
+//addsubpagechild
+Route::get('/add-sub-page-child',[SubPageChildController::class,'addSubChildPage']);
+
+
+
+
+
 
 
 

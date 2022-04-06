@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 
-@extends('frontend.layouts.title')
+@include('frontend.layouts.title')
 
 <body>
     <!-- header -->
- @extends('frontend.layouts.header')
+ @include('frontend.layouts.header')
 
     <!-- //header -->
 
@@ -15,7 +15,7 @@
             <div class="container pt-4 pb-sm-4">
                 <h4 class="inner-text-title font-weight-bold pt-sm-5 pt-4"> </h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/')}}">Home</a></li>
                     <li class="active"><i class="fas fa-angle-right mx-2">  {{request()->route('id')}}  </i> </li>
                 </ul>
             </div>
@@ -72,7 +72,7 @@
 
 
     <!-- footer -->
-    @extends('frontend.layouts.footer')
+    @include('frontend.layouts.footer')
 
     <!-- //footer -->
 
