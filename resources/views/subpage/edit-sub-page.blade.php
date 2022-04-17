@@ -40,8 +40,8 @@
                             <div class="form-group">
                             <label for="textarea">textarea</label>
                             <textarea name="text" value="{{ $subpage->text }}" id="editor">
-
-
+                            {{ $subpage->text }}
+                       
                             </textarea>
                             <script>
                                 //CKEDITOR.replace('text').getData('text');
@@ -50,7 +50,7 @@
                             </script>   
                             </div>
                         
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </form>
                           
 

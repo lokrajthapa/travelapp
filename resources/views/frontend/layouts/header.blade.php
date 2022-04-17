@@ -5,8 +5,6 @@ use App\Models\SelectClass;
 $sc = new SelectClass();
 
 $subheadings = $sc->selectSubHeading("Tours");
-
-
 $subheadingsHiking = $sc->selectSubHeading("Hiking");
 $subheadingsTreking = $sc->selectSubHeading("Trekking");
 $subheadingsTibet = $sc->selectSubHeading("Tibet");
@@ -51,7 +49,7 @@ $subheadingsActivities =$sc->selectSubHeading('Activities');
                             <a class="nav-link" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ url('/about') }}">About</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('mainpage/').'/12' }}">About</a>
                         </li>
                         <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Destinations  <i class="fas fa-angle-down"> </i> </a>
@@ -88,7 +86,7 @@ $subheadingsActivities =$sc->selectSubHeading('Activities');
 											@foreach($subheadingsTreking   as $subheading)
 
 											<li>
-												<a class="dropdown-item" href=" {{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
+												<a class="dropdown-item" href="{{url('page/').'/'.$subheading->id}}"> {{ $subheading->pagesubheading }}</a>
 											</li>
                                             @endforeach
 

@@ -33,6 +33,8 @@ use App\Http\Controllers\SubPageChildController;
 // Route::get('/', 'frontend/FrontendController@displayheading');
 Route::get('/',[FrontendController::class,'displayheading']);
 Route::get('/page/{id}',[FrontendController::class,'selectPageDetailsFromTable']);
+Route::get('/mainpage/{id}',[FrontendController::class,'selectMainPageDetails']);
+
 
 //Route::get('/',[SubPageController::class,'addsubPage']);
 //  Route::get('/', function()

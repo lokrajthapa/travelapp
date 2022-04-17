@@ -22,13 +22,13 @@
                             <div class="form-group">
                             <label for="description">Description</label>
                             <textarea name="text" id="editor"   value="{{ $page->text }} ">
-
+                            {{ $page->text }}
                                 
                             </textarea>
         
                             </div>
                                                 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
                     </form>
                     <script>
                               var ckdata =  CKEDITOR.instances['editor'].getData();

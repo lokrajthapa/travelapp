@@ -47,6 +47,12 @@ class FrontendController extends Controller
                     return view('frontend.page',compact('pageDetails') );
     }
     
+    public function selectMainPageDetails($id)
+    {
+      $mainpagedetails=Page::select('id','pageheading','text')->where('id',$id)->get();
+
+      return view('frontend.mainpage',compact('mainpagedetails'));
+    }
 
 
 
